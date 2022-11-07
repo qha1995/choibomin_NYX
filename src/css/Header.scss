@@ -1,0 +1,93 @@
+@use 'common';
+
+.Header {
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    color: #f9f9f9;
+    left: 0;
+    line-height: 7.9rem;
+    position: -webkit-sticky;
+    position: sticky;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+
+    &.on .gnb {
+        background: common.$bColor;
+    }
+
+    .gnb {
+        position: relative;
+        transition: 0.5s;
+
+
+        ul {
+            color: #f9f9f9;
+            display: flex;
+            font-size: 1.7rem;
+            font-weight: 500;
+            gap: 4rem;
+
+
+            li {
+                position: relative;
+            }
+
+            .list {
+                text-transform: uppercase;
+                color: common.$wColor;
+            }
+
+            &.rt {
+                gap: 2rem;
+                font-size: 2.5rem;
+                color: common.$wColor;
+                ;
+
+                span {
+                    position: absolute;
+                    width: 2rem;
+                    height: 2rem;
+                    font-size: 1.25rem;
+                    padding: 0.5rem;
+                    top: 1.5rem;
+                    right: -1rem;
+                    background: common.$mainColor;
+                    color: common.$subColor;
+                    border-radius: 50%;
+                    line-height: 0.8;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    h1 {
+        position: absolute;
+        top: 0;
+        left: 14rem;
+        font-size: 0;
+
+        img {
+            height: 6rem;
+        }
+    }
+
+    .rt {
+        position: absolute;
+        top: 0;
+        right: 8rem;
+
+        .search {
+            position: absolute;
+            top: 0;
+            left: -50rem;
+            font-size: 1.3rem;
+
+            input {
+                width: 24rem;
+            }
+        }
+    }
+
+
+}
