@@ -91,3 +91,112 @@
 
 
 }
+
+@media (max-width: 768px) {
+
+    .Header {
+        background: #000;
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+        color: #f9f9f9;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: flex-start;
+        left: -100%;
+        line-height: 4rem;
+        min-width: 320px;
+        padding: 10px 30px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+
+        &.on .gnb {
+            background: common.$bColor;
+        }
+
+        &.os {
+            left: 0;
+            transition: 1s;
+        }
+
+        .gnb {
+            position: relative;
+            transition: 0.5s;
+
+
+            ul {
+                color: #f9f9f9;
+                display: flex;
+                flex-direction: column;
+                font-size: 1.7rem;
+                font-weight: 500;
+                gap: 0;
+            }
+
+
+            li {
+                position: relative;
+            }
+
+            .list {
+                text-transform: uppercase;
+                color: common.$wColor;
+            }
+
+            &.rt {
+                gap: 2rem;
+                font-size: 2.5rem;
+                color: common.$wColor;
+                ;
+
+                span {
+                    position: absolute;
+                    width: 2rem;
+                    height: 2rem;
+                    font-size: 1.25rem;
+                    padding: 0.5rem;
+                    top: 1.5rem;
+                    right: -1rem;
+                    background: common.$mainColor;
+                    color: common.$subColor;
+                    border-radius: 50%;
+                    line-height: 0.8;
+                    text-align: center;
+                }
+            }
+        }
+
+
+        h1 {
+            font-size: 0;
+            left: 50%;
+            position: fixed;
+            top: 3%;
+            transform: translateX(-50%);
+            z-index: 999;
+
+            img {
+                height: 6rem;
+            }
+        }
+
+        .rt {
+            position: absolute;
+            top: 0;
+            right: 8rem;
+
+            .search {
+                position: absolute;
+                top: 0;
+                left: -50rem;
+                font-size: 1.3rem;
+
+                input {
+                    width: 24rem;
+                }
+            }
+        }
+
+    }
+}

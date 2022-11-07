@@ -14,3 +14,9 @@ body {
     background-color: #333;
 
 }
+
+@media (max-width: 768px) {
+    .Wrapper {
+        overflow-x: hidden;
+    }
+}

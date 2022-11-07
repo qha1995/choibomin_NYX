@@ -13,7 +13,7 @@ import SideBanner from './components/SideBanner';
 import ToTop from './components/ToTop';
 import Board from './pages/Board';
 import Search from './components/Search';
-//https://desipossa.github.io/shop_cra/assets/data.json
+import Mopen from './components/Mopen';
 const App = () => {
   const [itm, setItm] = useState();
   const [cart, setCart] = useState([]);
@@ -58,14 +58,16 @@ const App = () => {
     }
     getProduct();
   }, [])
+
+  const [os, setOs] = useState(false);
   return (
     <>
       {
         itm ?
-          <div className='wapper'>
+          <div className='Wapper'>
 
 
-            <Header cart={cart} shopList={itm} searchInput={searchInput} setSearchInput={setSearchInput} search={search} setSearch={setSearch} />
+            <Header cart={cart} shopList={itm} searchInput={searchInput} setSearchInput={setSearchInput} search={search} setSearch={setSearch} on={os} setOn={setOs} />
             <Routes>
               <Route path='/' element={<Main shopList={itm} />} />
               <Route path='/board' element={<Board input={input} setInput={setInput} list={list} setList={setList} />} />
@@ -78,6 +80,7 @@ const App = () => {
             <Footer />
             <SideBanner shopList={itm} />
             <ToTop />
+            <Mopen on={os} setOn={setOs} />
           </div>
           : <div>로딩 중 입니다.</div>
       }
