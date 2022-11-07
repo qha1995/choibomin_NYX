@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/choibomin_NYX/static/css/main.aeba6b38.css",
-    "main.js": "/choibomin_NYX/static/js/main.c333d7e2.js",
+    "main.css": "/choibomin_NYX/static/css/main.52bd000d.css",
+    "main.js": "/choibomin_NYX/static/js/main.382cad47.js",
     "static/media/main_m01.jpg": "/choibomin_NYX/static/media/main_m01.28773bce829ceda82d2e.jpg",
     "static/media/main_m02.jpg": "/choibomin_NYX/static/media/main_m02.374eb50f9c7f48c6c14e.jpg",
     "static/media/main_m03.jpg": "/choibomin_NYX/static/media/main_m03.502e65c4b647e707af04.jpg",
     "index.html": "/choibomin_NYX/index.html",
-    "main.aeba6b38.css.map": "/choibomin_NYX/static/css/main.aeba6b38.css.map",
-    "main.c333d7e2.js.map": "/choibomin_NYX/static/js/main.c333d7e2.js.map"
+    "main.52bd000d.css.map": "/choibomin_NYX/static/css/main.52bd000d.css.map",
+    "main.382cad47.js.map": "/choibomin_NYX/static/js/main.382cad47.js.map"
   },
   "entrypoints": [
-    "static/css/main.aeba6b38.css",
-    "static/js/main.c333d7e2.js"
+    "static/css/main.52bd000d.css",
+    "static/js/main.382cad47.js"
   ]
 }
