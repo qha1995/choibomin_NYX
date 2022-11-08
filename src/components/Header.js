@@ -23,6 +23,7 @@ const Header = ({ cart, shopList, searchInput, setSearchInput, search, setSearch
             HD.current.removeEventListener('wheel', stopEvent);
         }
     }, [])
+    //const [os, setOs] = useState(false);
     return (
         <header className={`Header ${on ? 'on' : ''}  ${os ? 'os' : ''}  `} ref={HD}>
             <div className='gnb'>
@@ -32,10 +33,10 @@ const Header = ({ cart, shopList, searchInput, setSearchInput, search, setSearch
                     </Link>
                 </h1>
                 <nav className='inner'>
-                    <MainNav shopList={shopList} />
+                    <MainNav shopList={shopList} os={os} setOs={setOs} />
                 </nav>
                 <ul className="rt">
-                    <li><FiUserPlus /></li>
+                    <li ><FiUserPlus /></li>
                     <li>
                         <Link to="/cart">
                             <FiShoppingCart />
