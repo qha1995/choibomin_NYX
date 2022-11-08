@@ -60,14 +60,16 @@ const App = () => {
   }, [])
 
   const [os, setOs] = useState(false);
+
+
   return (
     <>
       {
         itm ?
-          <div className='Wapper'>
+          <div className='Wrapper'>
 
 
-            <Header cart={cart} shopList={itm} searchInput={searchInput} setSearchInput={setSearchInput} search={search} setSearch={setSearch} on={os} setOn={setOs} />
+            <Header cart={cart} shopList={itm} searchInput={searchInput} setSearchInput={setSearchInput} search={search} setSearch={setSearch} os={os} setOs={setOs} />
             <Routes>
               <Route path='/' element={<Main shopList={itm} />} />
               <Route path='/board' element={<Board input={input} setInput={setInput} list={list} setList={setList} />} />
@@ -80,7 +82,7 @@ const App = () => {
             <Footer />
             <SideBanner shopList={itm} />
             <ToTop />
-            <Mopen on={os} setOn={setOs} />
+            <Mopen os={os} setOs={setOs} />
           </div>
           : <div>로딩 중 입니다.</div>
       }

@@ -18,6 +18,7 @@ const MainSlide = () => {
                 dots={true}
                 speed={3000}
                 autoplaySpeed={5000}
+
             >
                 {
                     main_content.slice(0, 3).map((it, idx) => {

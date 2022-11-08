@@ -28,6 +28,7 @@
             gap: 4rem;
 
 
+
             li {
                 position: relative;
             }
@@ -112,7 +113,7 @@
         z-index: 1000;
 
         &.on .gnb {
-            background: common.$bColor;
+            background: #000
         }
 
         &.os {
@@ -124,14 +125,19 @@
             position: relative;
             transition: 0.5s;
 
+            .inner {
+                transform: translateY(150px);
 
-            ul {
+            }
+
+            .rn {
                 color: #f9f9f9;
                 display: flex;
                 flex-direction: column;
-                font-size: 1.7rem;
+                font-size: 4.5vw;
                 font-weight: 500;
                 gap: 0;
+                letter-spacing: 1px;
             }
 
 
@@ -145,7 +151,7 @@
             }
 
             &.rt {
-                gap: 2rem;
+                gap: 0rem;
                 font-size: 2.5rem;
                 color: common.$wColor;
                 ;
@@ -174,7 +180,7 @@
             position: fixed;
             top: 3%;
             transform: translateX(-50%);
-            z-index: 999;
+            z-index: 9999;
 
             img {
                 height: 6rem;
@@ -182,18 +188,16 @@
         }
 
         .rt {
-            position: absolute;
-            top: 0;
-            right: 8rem;
+            position: static;
+            transform: translateY(200px);
+
+
 
             .search {
-                position: absolute;
-                top: 0;
-                left: -50rem;
-                font-size: 1.3rem;
+                display: none;
 
                 input {
-                    width: 24rem;
+                    width: 80vw;
                 }
             }
         }

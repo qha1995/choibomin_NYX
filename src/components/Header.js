@@ -1,24 +1,30 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import MainNav from './MainNav'
 import '../css/Header.scss'
 import { FiShoppingCart, FiUserPlus, FiSearch } from "react-icons/fi";
 import { Link } from 'react-router-dom';
 import SearchForm from './SearchForm';
 
-const Header = ({ cart, shopList, searchInput, setSearchInput, search, setSearch }) => {
+const Header = ({ cart, shopList, searchInput, setSearchInput, search, setSearch, os, setOs }) => {
     const [on, setOn] = useState(false);
+    const HD = useRef(null);
     useEffect(() => {
         const scrollEvent = () => {
             let sct = window.scrollY;
             sct > 0 ? setOn(true) : setOn(false)
         }
+        const stopEvent = e => {
+            e.preventDefault();
+        }
         window.addEventListener('scroll', scrollEvent);
+        HD.current.addEventListener('wheel', stopEvent);
         return () => {
             window.removeEventListener('scroll', scrollEvent);
+            HD.current.removeEventListener('wheel', stopEvent);
         }
     }, [])
     return (
-        <header className={`Header ${on ? 'on' : ''}`}>
+        <header className={`Header ${on ? 'on' : ''}  ${os ? 'os' : ''}  `} ref={HD}>
             <div className='gnb'>
                 <h1>
                     <Link to="/">

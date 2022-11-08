@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import '../css/Mopen.css'
 
 
-const Mopen = ({ on, setOn }) => {
+const Mopen = ({ os, setOs }) => {
 
     return (
 
-        <div className={`mopen ${on ? "os" : ""}`} onClick={() => setOn(!on)}>
+        <div className={`mopen ${os ? "os" : ""}`} onClick={() => setOs(!os)}>
             <button>모바일메뉴열기</button>
         </div >
 

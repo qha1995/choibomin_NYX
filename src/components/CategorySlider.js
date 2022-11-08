@@ -11,6 +11,18 @@ const CategorySlider = ({ shopList, category, arrow, dots }) => {
             arrows={arrow}
             slidesToShow={5}
             dots={dots}
+            responsive={
+                [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            infinite: true,
+
+                        }
+                    }
+                ]}
+
         >
             {
                 Mainlist.map(it => {

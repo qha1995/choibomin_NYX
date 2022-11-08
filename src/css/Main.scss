@@ -1,6 +1,7 @@
 @use 'common';
 
 .sc {
+
     padding: 10rem 0;
 
     &.bg {
@@ -243,5 +244,265 @@
     &.on {
         visibility: visible;
         opacity: 1;
+    }
+}
+
+
+//반응형 페이지
+
+
+@media (max-width: 768px) {
+
+    .sc {
+        width: auto;
+        padding: 10rem 0;
+
+        &.bg {
+            background: #f9f9f9;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0 0 2rem 0;
+            text-align: center;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 6rem;
+                height: 0.1rem;
+                background: common.$mainColor;
+                margin: 1rem auto;
+            }
+        }
+
+        p {
+            background: common.$mainColor;
+            color: common.$wColor;
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin: 0 0 5rem;
+            padding: 30px 0;
+            text-align: center;
+            cursor: pointer;
+        }
+
+    }
+
+    .sce {
+        padding: 10rem 0;
+
+        &.bg {
+            background: common.$mainColor;
+        }
+
+        h2 {
+            font-size: 6vw;
+            font-weight: 700;
+            margin: 0 0 2rem 0;
+            text-align: center;
+
+            &::after {
+                content: "";
+                background: common.$gColor;
+                display: block;
+                height: 0.1rem;
+                margin: 1rem auto;
+                width: 20rem;
+            }
+        }
+
+        p {
+            font-size: 4vw;
+            font-weight: 300;
+            margin: 0 0 5rem;
+            text-align: center;
+        }
+
+        .inner {
+            width: auto;
+
+            figure {
+                padding: 0 3rem;
+
+            }
+
+            .box {
+                background: #fff;
+                padding: 2rem 1rem;
+                border: 1px solid #ddd;
+                margin: 0 0 2rem 0;
+            }
+
+            .name {
+                font-weight: 600;
+                margin: 0 0 1rem 0;
+                min-height: 3rem;
+            }
+
+            .des {
+                font-size: 1.4rem;
+                margin: 0 0 1rem 0;
+                min-height: 10rem;
+            }
+
+            .price {
+                font-size: 1.5rem;
+                font-weight: 500;
+
+                span {
+                    color: common.$subColor;
+                }
+
+            }
+        }
+    }
+
+    .slide_ {
+        .inner {
+            position: relative;
+        }
+
+        .slick-arrow {
+            background: transparent;
+            border: 3px solid #ddd;
+            border-bottom: none;
+            border-right: none;
+            font-size: 0;
+            height: 5rem;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            width: 5rem;
+            z-index: 999;
+
+        }
+
+        .slick-prev {
+            transform: translate(-50%, -50%) rotate(-45deg);
+            margin: 0 0 0 -70rem;
+        }
+
+        .slick-next {
+            transform: translate(-50%, -50%) rotate(135deg);
+            margin: 0 0 0 70rem;
+        }
+
+        .slick-dots {
+            font-size: 0;
+            text-align: center;
+            margin: 4rem 0 0 0;
+            padding: 0 3rem;
+
+            li {
+                display: inline-block;
+                margin: 1rem 0;
+
+                button {
+                    background: transparent;
+                    background: #888;
+                    border: none;
+                    color: transparent;
+                    height: 0.4rem;
+                    margin: 0 0.4rem;
+                    text-shadow: 0 0;
+                    width: 5rem;
+                }
+
+                &.slick-active button {
+                    background: common.$subColor;
+                }
+            }
+        }
+    }
+
+    .bp_tab {
+        display: flex;
+        justify-content: center;
+        margin: 0 0 3rem 0;
+        z-index: 9999;
+
+        li {
+            background: common.$mainColor;
+            cursor: pointer;
+            font-size: 4vw;
+            padding: 1rem 2.7rem;
+            text-transform: uppercase;
+        }
+
+        li~li {
+            border-left: 3px solid #333;
+        }
+    }
+
+    .SideBanner {
+        position: fixed;
+        top: 0;
+        right: -30rem;
+        width: 30rem;
+        height: 100vh;
+        background: #fff;
+        z-index: 1000;
+        padding: 0 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-left: 1px solid #ddd;
+        transition: 0.5s;
+
+        &.on {
+            right: 0;
+        }
+
+        &>i {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateX(-100%);
+            padding: 1rem;
+            background: common.$subColor;
+            color: common.$mainColor;
+            cursor: pointer;
+
+            &.on {
+                transform: translateX(-100%) rotate(180deg);
+            }
+        }
+
+        .slide {
+            margin: 0 0 3rem 0;
+        }
+
+        .case>* {
+            margin: 0 0 3rem 0;
+            color: common.$mainColor;
+
+
+            .tel {
+                color: common.$mainColor;
+            }
+        }
+    }
+
+    .ToTop {
+        background: #f7f7f7;
+        bottom: 3rem;
+        color: #222;
+        cursor: pointer;
+        font-size: 2rem;
+        opacity: 0;
+        padding: 1rem;
+        position: fixed;
+        right: 3rem;
+        transition: .5s;
+        visibility: hidden;
+        z-index: 999;
+
+
+        &.on {
+            visibility: visible;
+            opacity: 1;
+        }
     }
 }

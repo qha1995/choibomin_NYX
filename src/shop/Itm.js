@@ -24,7 +24,7 @@ const Itm = ({ shopList, cart, setCart }) => {
                         }
                     </ul>
                     <div className='price'><span>{matchItm.price.toLocaleString()}</span> 원</div>
-                    <button onClick={() => {
+                    <button className="btn" onClick={() => {
 
                         setCart([
                             ...cart,
@@ -40,7 +40,10 @@ const Itm = ({ shopList, cart, setCart }) => {
                         navigate('/cart')
                     }
                     }>장바구니 담기</button>
+                    <button className="bts"><a href="/choibomin_NYX/shopList">back</a></button>
                 </div>
+
+
 
             </div>
         </section>

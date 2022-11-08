@@ -7,7 +7,7 @@ const company = {
         "SAT, SUN, HOLIDAY OFF"
     ],
 
-    address: "서울특별시 강남구 테헤란로 517, NYX 현대백화점 삼성무역센터점",
+    address: "서울특별시 강남구 테헤란로 517, 현대백화점 삼성무역센터점",
 
 }
 
